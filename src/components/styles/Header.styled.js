@@ -37,7 +37,6 @@ export const StyledHeader = styled.header`
   }
 
   .marquee {
-    /* background-color: darkgray; */
     width: 100%;
     padding: 1rem 0;
     font-weight: 600;
@@ -45,7 +44,6 @@ export const StyledHeader = styled.header`
   }
 
   .marquee p {
-    /* border: 1px solid black; */
     width: max-content;
     padding-right: 100%;
     animation: marquee 8s linear infinite;
