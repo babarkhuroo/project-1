@@ -5,5 +5,6 @@ export const theme = {
   breakpoints: {
     sm: 'screen and (max-width: 480px)',
     md: 'screen and (max-width: 768px)',
+    lg: 'screen and (max-width: 1024px)',
   },
 }

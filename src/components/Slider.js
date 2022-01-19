@@ -31,7 +31,12 @@ function Slider() {
             position = 'prev'
           }
           return (
-            <img className={`img ${position}`} src={url} alt={`img-${id}`} />
+            <img
+              key={idx}
+              className={`img ${position}`}
+              src={url}
+              alt={`img-${id}`}
+            />
           )
         })}
       </div>
@@ -45,6 +50,7 @@ function Slider() {
           }
           return (
             <div
+              key={idx}
               className={`indicator ${active}`}
               onClick={() => setIndex(idx)}
             ></div>

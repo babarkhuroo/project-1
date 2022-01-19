@@ -38,7 +38,7 @@ export const StyledSlider = styled.div`
   }
 
   .indicator-container {
-    background-color: grey;
+    background-color: rgba(0, 0, 0, 0.3);
     width: max-content;
     border-radius: 500px;
     padding: 0.5rem 1rem;

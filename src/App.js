@@ -6,17 +6,24 @@ import Main from './components/Main'
 import Footer from './components/Footer'
 import { ThemeProvider } from 'styled-components'
 import { theme } from './components/Globals/Theme'
+import { useGlobalContext } from './components/context'
+import LoginPage from './components/LoginPage'
+import VideoGallery from './components/VideoGallery'
 
 function App() {
+  const { isLogin } = useGlobalContext()
+
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Header />
       <RootContainer>
-        <GlobalStyles />
-        <Header />
+        {isLogin && <LoginPage />}
         <Slider />
+        <VideoGallery />
         <Main />
-        <Footer />
       </RootContainer>
+      <Footer />
     </ThemeProvider>
   )
 }

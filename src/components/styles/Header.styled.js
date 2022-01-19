@@ -6,7 +6,7 @@ export const StyledHeader = styled.header`
     justify-content: flex-end;
     gap: 3rem;
     padding: 1rem 2rem;
-    border-bottom: 1px solid darkgrey;
+    border-bottom: 1px solid black;
   }
 
   ul {

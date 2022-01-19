@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const RootContainer = styled.div`
-  width: 1280px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 1280px;
   margin: auto;
 `

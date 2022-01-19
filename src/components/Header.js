@@ -1,12 +1,18 @@
+import { HiOutlineLogin } from 'react-icons/hi'
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'
 import { Button } from './Globals/Globals'
 import { StyledHeader } from './styles/Header.styled'
+import { useGlobalContext } from './context'
 
 function Header() {
+  const { setIsLogin } = useGlobalContext()
+
   return (
     <StyledHeader>
       <nav>
-        <Button>أدخل حسابك</Button>
+        <Button onClick={() => setIsLogin(true)}>
+          <HiOutlineLogin size='2.5rem' />
+        </Button>
         <ul>
           <li>
             <a href='/' className='fb'>
