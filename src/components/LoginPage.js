@@ -1,40 +1,78 @@
 import { useGlobalContext } from './context'
 import { StyledLoginPage } from './styles/LoginPage.styled'
 import { FaTimes } from 'react-icons/fa'
+import { useState } from 'react'
 
 function LoginPage() {
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
   const { setIsLogin } = useGlobalContext()
 
   const handleSubmit = (e) => {
     e.preventDefault()
   }
 
+  const handleClose = (e) => {
+    if (e.target.id === 'login') {
+      setIsLogin(false)
+    }
+  }
+
+  const handleLabel = (e) => {
+    e.target.labels[0].classList.add('click')
+  }
+
+  const handleLoss = (e) => {
+    if (!e.target.value) {
+      e.target.labels[0].classList.remove('click')
+    }
+  }
+
   return (
-    <StyledLoginPage>
+    <StyledLoginPage onClick={handleClose} id='login'>
       <div className='hero'>
         <div className='blue'>
-          <h2>Login/signup</h2>
+          <h2>سجل الدخول</h2>
         </div>
         <div className='container'>
           <form className='form'>
             <p>
-              <label htmlFor='username'>Username:</label>
-              <input className='input username' id='username' type='text' />
+              <label htmlFor='username'>ادخل رقم المستخدم</label>
+              <input
+                className='input username'
+                id='username'
+                type='text'
+                autoFocus
+                required
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                onFocus={handleLabel}
+                onBlur={handleLoss}
+              />
             </p>
             <p>
-              <label htmlFor='password'>Password:</label>
-              <input className='input password' id='password' type='password' />
+              <label htmlFor='password'>ادخل كلمة السر</label>
+              <input
+                className='input password'
+                id='password'
+                type='password'
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                onFocus={handleLabel}
+                onBlur={handleLoss}
+              />
             </p>
             <div className='forgot'>
-              <a href='/'>Forgot Password?</a>
+              <a href='/'>نسيت كلمة السر</a>
             </div>
             <hr />
             <button className='btn' onClick={handleSubmit}>
-              Login
+              سجل الدخول
             </button>
             <hr />
             <div className='create'>
-              <a href='/'>Create account</a>
+              <a href='/'>عمل حساب</a>
             </div>
           </form>
           <FaTimes size='3rem' onClick={() => setIsLogin(false)} />

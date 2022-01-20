@@ -5,10 +5,8 @@ export const StyledLoginPage = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  margin: 0 auto;
-  padding: 2rem;
   z-index: 10;
   display: flex;
   justify-content: center;
@@ -16,18 +14,20 @@ export const StyledLoginPage = styled.div`
 
   .hero {
     display: flex;
-    width: 80%;
-    max-width: 800px;
+    width: 100%;
+    max-width: 600px;
   }
   .blue {
-    flex-basis: 30%;
-    border-radius: 5px 0 0 5px;
-    background-color: blueviolet;
+    flex-basis: 40%;
+    border-radius: 0 5px 5px 0;
+    background-color: #0066ff;
+    position: relative;
   }
   .container {
-    flex-basis: 70%;
-    border-radius: 0 5px 5px 0;
-    background-color: lightgrey;
+    flex-basis: 60%;
+    border-radius: 5px 0 0 5px;
+    background-color: white;
+    padding: 3rem 2rem;
     position: relative;
   }
   svg {
@@ -51,53 +51,68 @@ export const StyledLoginPage = styled.div`
     border: none;
   }
   .form {
-    width: max-content;
-    margin: 2rem auto;
+    padding: 2rem 1rem;
   }
   .form p {
-    margin: 2rem;
+    position: relative;
+    margin-bottom: 4rem;
   }
   .form label {
+    font-weight: 500;
     display: block;
+    position: absolute;
+    color: grey;
+    top: 0.5rem;
+    transform-origin: top right;
+    transition: transform 0.2s ease;
+  }
+  .form label.click {
+    transform: translateY(-17px) scale(0.85);
   }
   .input {
     border: none;
-    padding: 0.5rem;
+    width: 100%;
+    font-size: 15px;
+    padding: 0.5rem 0;
     background-color: transparent;
-    border: 1px solid black;
+    border-bottom: 1px solid grey;
   }
   .input:focus {
     outline: none;
+    border-bottom: 1px solid #0066ff;
   }
   .forgot {
     width: max-content;
-    margin: 2rem auto;
+    margin: 0 auto 2rem;
   }
-  .forgot a {
-    color: red;
+  a {
+    font-weight: 500;
+    display: inline-block;
+    box-sizing: border-box;
+    line-height: 1.5rem;
+    color: #0066ff;
+    font-size: 15px;
   }
-  .forgot a:hover {
-    border-bottom: 1px solid black;
+  a:hover {
+    border-bottom: 1px solid #0066ff;
   }
   .btn {
+    color: white;
+    background-color: rgb(0, 102, 255);
+    font-weight: 500;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 100%;
     margin: 2rem 0;
     padding: 1rem;
+    transition: all 0.15s linear;
     cursor: pointer;
   }
   .btn:hover {
-    background-color: red;
+    background-color: rgba(0, 102, 255, 0.8);
   }
   .create {
     width: max-content;
-    margin: 2rem auto;
-  }
-  .create a {
-    color: red;
-  }
-  .create a:hover {
-    border-bottom: 1px solid black;
+    margin: 2rem auto 0;
   }
 `
