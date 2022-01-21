@@ -26,7 +26,7 @@ function Footer() {
           </li>
         </ul>
       </section>
-      <h5>حقوق النشر</h5>
+      <h5>&copy; حقوق النشر</h5>
     </StyledFooter>
   )
 }

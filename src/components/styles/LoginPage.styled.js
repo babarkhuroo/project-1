@@ -11,39 +11,43 @@ export const StyledLoginPage = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fadeIn 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 
   .hero {
     display: flex;
+    justify-content: center;
     width: 100%;
     max-width: 600px;
+    margin: 0 4rem;
+    /* animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; */
   }
   .blue {
-    flex-basis: 40%;
+    padding: 3rem;
     border-radius: 0 5px 5px 0;
     background-color: #0066ff;
-    position: relative;
   }
   .container {
-    flex-basis: 60%;
+    max-height: 75vh;
     border-radius: 5px 0 0 5px;
     background-color: white;
     padding: 3rem 2rem;
-    position: relative;
+    overflow-y: scroll;
   }
   svg {
-    position: absolute;
-    top: 0rem;
-    left: -3.5rem;
+    margin: 0 0.5rem;
+    line-height: 0;
     color: white;
     cursor: pointer;
     transition: color 0.2s linear;
   }
   svg:hover {
-    color: darkred;
+    color: #bd0f10;
   }
-  h2 {
+  .blue h2 {
     color: white;
-    padding: 1.5rem;
+  }
+  .container h2 {
+    display: none;
   }
   hr {
     height: 1px;
@@ -114,5 +118,44 @@ export const StyledLoginPage = styled.div`
   .create {
     width: max-content;
     margin: 2rem auto 0;
+  }
+
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    .hero {
+      margin: 0;
+    }
+    .blue {
+      display: none;
+    }
+    .container {
+      margin-right: 3rem;
+      flex-basis: 100%;
+      border-radius: 5px;
+    }
+    .container h2 {
+      display: block;
+      color: black;
+      margin: 0 1rem 1rem 0;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      background: rgba(0, 0, 0, 0);
+    }
+    100% {
+      background: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0.8) translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1) translateY(0px);
+      opacity: 1;
+    }
   }
 `

@@ -41,7 +41,7 @@ export const StyledSlider = styled.div`
     background-color: rgba(0, 0, 0, 0.3);
     width: max-content;
     border-radius: 500px;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.8rem;
     margin: 1rem auto;
     display: flex;
     justify-content: center;
@@ -73,11 +73,32 @@ export const StyledSlider = styled.div`
     .img-container {
       height: 300px;
     }
+    .indicator-container {
+      padding: 0.3rem 0.5rem;
+    }
+    .indicator {
+      margin: 0 0.4rem;
+      height: 7px;
+      width: 7px;
+    }
+    .indicator.active {
+      width: 16px;
+    }
   }
 
   @media ${({ theme }) => theme.breakpoints.sm} {
     .img-container {
       height: 200px;
+    }
+    .indicator-container {
+      padding: 0.3rem 0.5rem;
+    }
+    .indicator {
+      height: 6px;
+      width: 6px;
+    }
+    .indicator.active {
+      width: 14px;
     }
   }
 `

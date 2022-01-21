@@ -2,14 +2,15 @@ import styled from 'styled-components'
 
 export const StyledMain = styled.section`
   padding: 3rem;
+  margin-bottom: 3rem;
   display: flex;
   gap: 3rem;
   justify-content: space-around;
   flex-wrap: wrap;
 
   .article {
-    background-color: lightgrey;
-    box-shadow: 5px 5px 15px lightgrey;
+    background-color: #fefefe;
+    box-shadow: 10px 10px 25px lightgrey, -10px -10px 25px lightgrey;
     width: 40%;
     min-width: 330px;
     padding: 2rem 3rem;

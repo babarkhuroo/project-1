@@ -18,7 +18,9 @@ export const GlobalStyles = createGlobalStyle`
     body {
         font-family: 'Noto Kufi Arabic', sans-serif, serif;
         font-size: 1.6rem;
-        background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(97,186,255,1) 0%, rgba(166,239,253,1) 90.1% );
+        background-color: #FFDEE9;
+background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+
     }
 
     a {

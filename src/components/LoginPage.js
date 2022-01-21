@@ -35,6 +35,7 @@ function LoginPage() {
           <h2>سجل الدخول</h2>
         </div>
         <div className='container'>
+          <h2>سجل الدخول</h2>
           <form className='form'>
             <p>
               <label htmlFor='username'>ادخل رقم المستخدم</label>
@@ -75,8 +76,8 @@ function LoginPage() {
               <a href='/'>عمل حساب</a>
             </div>
           </form>
-          <FaTimes size='3rem' onClick={() => setIsLogin(false)} />
         </div>
+        <FaTimes size='3rem' onClick={() => setIsLogin(false)} />
       </div>
     </StyledLoginPage>
   )

@@ -14,4 +14,11 @@ export const Button = styled.button`
     cursor: pointer;
     background-color: rgba(0, 102, 255, 0.8);
   }
+
+  @media ${({ theme }) => theme.breakpoints.md} {
+    padding: 0.8rem 3rem;
+  }
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    padding: 0.7rem 2.5rem;
+  }
 `

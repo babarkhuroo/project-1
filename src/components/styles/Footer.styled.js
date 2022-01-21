@@ -63,6 +63,6 @@ export const StyledFooter = styled.footer`
 
   h5 {
     width: max-content;
-    margin: 0 auto;
+    margin: 2rem auto;
   }
 `
