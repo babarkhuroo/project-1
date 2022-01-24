@@ -67,6 +67,7 @@ export const StyledLoginPage = styled.div`
     position: absolute;
     color: grey;
     top: 0.5rem;
+    cursor: text;
     transform-origin: top right;
     transition: transform 0.2s ease;
   }
