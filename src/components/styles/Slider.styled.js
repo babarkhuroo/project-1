@@ -17,24 +17,25 @@ export const StyledSlider = styled.div`
     height: 100%;
     object-fit: cover;
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
-    transition: all 0.6s linear;
+    transform: translate(0, -50%);
+    transition: all 1s ease;
   }
 
   .img.active {
     opacity: 1;
-    transform: translateX(0);
+    transform: translate(0, -50%);
   }
 
   .img.next {
     opacity: 0;
-    transform: translateX(-110%);
+    transform: translate(-110%, -50%);
   }
 
   .img.prev {
     opacity: 0;
-    transform: translateX(110%);
+    transform: translate(110%, -50%);
   }
 
   .indicator-container {

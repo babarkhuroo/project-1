@@ -8,7 +8,7 @@ function Slider() {
   useEffect(() => {
     let slideFunc = setInterval(() => {
       setIndex(index + 1)
-    }, 5000)
+    }, 7000)
     if (index < 0) {
       setIndex(images.length - 1)
     }

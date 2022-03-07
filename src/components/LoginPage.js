@@ -18,16 +18,6 @@ function LoginPage() {
     }
   }
 
-  const handleLabel = (e) => {
-    e.target.labels[0].classList.add('click')
-  }
-
-  const handleLoss = (e) => {
-    if (!e.target.value) {
-      e.target.labels[0].classList.remove('click')
-    }
-  }
-
   return (
     <StyledLoginPage onClick={handleClose} id='login'>
       <div className='hero'>
@@ -38,7 +28,6 @@ function LoginPage() {
           <h2>سجل الدخول</h2>
           <form className='form'>
             <p>
-              <label htmlFor='username'>ادخل رقم المستخدم</label>
               <input
                 className='input username'
                 id='username'
@@ -47,12 +36,10 @@ function LoginPage() {
                 required
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                onFocus={handleLabel}
-                onBlur={handleLoss}
               />
+              <label htmlFor='username'>ادخل رقم المستخدم</label>
             </p>
             <p>
-              <label htmlFor='password'>ادخل كلمة السر</label>
               <input
                 className='input password'
                 id='password'
@@ -60,9 +47,8 @@ function LoginPage() {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                onFocus={handleLabel}
-                onBlur={handleLoss}
               />
+              <label htmlFor='password'>ادخل كلمة السر</label>
             </p>
             <div className='forgot'>
               <a href='/'>نسيت كلمة السر</a>

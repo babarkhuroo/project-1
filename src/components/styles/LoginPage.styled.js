@@ -61,7 +61,7 @@ export const StyledLoginPage = styled.div`
     position: relative;
     margin-bottom: 4rem;
   }
-  .form label {
+  label {
     font-weight: 500;
     display: block;
     position: absolute;
@@ -70,9 +70,6 @@ export const StyledLoginPage = styled.div`
     cursor: text;
     transform-origin: top right;
     transition: transform 0.2s ease;
-  }
-  .form label.click {
-    transform: translateY(-17px) scale(0.85);
   }
   .input {
     border: none;
@@ -85,6 +82,9 @@ export const StyledLoginPage = styled.div`
   .input:focus {
     outline: none;
     border-bottom: 1px solid #0066ff;
+  }
+  .input:focus ~ label {
+    transform: translateY(-17px) scale(0.85);
   }
   .forgot {
     width: max-content;
